@@ -73,7 +73,10 @@ $( document ).ready(function() {
    });
 
    $('#header .arrow').on('click', function(){
-     jQuery.scrollTo('#page-wrapper', 600);
+    jQuery('html, body').animate({
+      scrollTop: jQuery('#page-wrapper').offset().top // Get the top position of #page-wrapper
+  }, 600);
+
    });
 
    $('.no-touch .head-block .details').on('mouseover', function(){
